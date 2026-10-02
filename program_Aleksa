@@ -1,0 +1,20 @@
+imie = input("Podaj swoje imię: ")
+nazwisko = input("podaj swoje nazwisko: ")
+dobrze = False
+
+while not dobrze:
+    lat = input("Podaj swój wiek: ")
+    if not lat.isdigit():
+        print("To nie jest liczba całkowita! Spróbuj jeszcze raz.")
+    else:
+        dobrze = True
+    if int(lat) <= 0:
+        dobrze = False
+        print("Masz za mało lat!")
+    else:
+        dobrze = True
+
+if int(lat) >= 18:
+    print(" Cześć "+ imie + " " + nazwisko + " masz " + lat+ " lat i jesteś pełnoletni!")
+else:
+    print(" Cześć "+ imie + " " + nazwisko + " masz " + lat+ " lat i jesteś nie pełnoletni!")
